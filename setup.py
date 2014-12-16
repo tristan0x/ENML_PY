@@ -1,5 +1,5 @@
 import os
-from setuptools import setup
+from setuptools import setup, find_packages
 
 f = open(os.path.join(os.path.dirname(__file__), 'README.md'))
 readme = f.read()
@@ -16,9 +16,11 @@ setup(
     long_description=readme,
     author='Carl Lee',
     author_email='ljbha007@gmail.com',
-    url='https://github.com/CarlLee/ENML_PY/tree/master',
-    package_dir={name: ''},
-    py_modules=['{0}.__init__'.format(name), '{0}.test'.format(name)],
+    data_files = [
+        ('', ['README.md'])
+    ],
+    url='https://github.com/tristan0x/ENML_PY/tree/master',
+    packages=find_packages(),
     zip_safe=False,
     classifiers=[
         'Development Status :: 4 - Beta',

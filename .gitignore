@@ -2,3 +2,5 @@
 *.swp
 *.html
 resources
+dist
+*.egg-info
